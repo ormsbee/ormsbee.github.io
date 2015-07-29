@@ -17,14 +17,14 @@ that it's overkill for many of our test cases. To help speed things up, I
 
 Unlike `ModuleStoreTestCase`, `SharedModuleStoreTestCase` only does
 `ModuleStore` cleanup at the class level. It's meant to be employed in
-situations where one or a small handful of courses are initialized once, and
+situations where one or a small handful of courses can be initialized once, and
 then used in a read-only manner by many tests. This is a particularly common
-practice for LMS tests, which often create the same course over and over in
-their `setUp()` methods.
+practice for LMS tests, which often create the same course over and over again
+in their `setUp()` methods.
 
-I converted a few test modules to measure the rough effects. Keep in mind that
-these numbers were using Jenkins reports across a very limited set of runs, and
-so are exteremely rough.
+I converted a few test modules to measure the effects. Keep in mind that these
+numbers were using Jenkins reports across a very limited set of runs, and so are
+extremely rough.
 
 | File                                              | # Tests | Before  | After | Delta |
 | :------------------------------------------------ | -------:| -------:| -----:| -----:|
@@ -32,7 +32,7 @@ so are exteremely rough.
 | lms/djangoapps/discussion_api/tests/test_api.py   |     409 |  2m 45s |   51s |  -69% |
 | lms/djangoapps/teams/tests/test_views.py          |     152 |  1m 17s |   33s |  -57% |
 
-Because course creation is relatively slow (~100-200ms), elimating this per-test
+Because course creation is relatively slow (~100-200ms), eliminating this per-test
 overhead is often most noticeable on test cases that use 
 [`ddt`](http://ddt.readthedocs.org) to generate many test function invocations.
 That being said, the largest percentage gain came in `test_ccx_modulestore.py`,
@@ -96,11 +96,3 @@ When we upgrade to Django 1.8, you'll be able to use
 to safely do class-level initialization of Django models with automatic cleanup.
 Please wait for that upgrade and place model manipulations in `setUp()` for now,
 even if it is a bit slower.
-
-## Don't Forget Bulk Operations
-
-
-
-## Overall Takeaway
-
-Data access is expensive.
