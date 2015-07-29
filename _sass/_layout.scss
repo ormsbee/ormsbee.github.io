@@ -212,15 +212,12 @@
 
     h2 {
         font-size: 28px;
-
         @include media-query($on-laptop) {
             font-size: 24px;
         }
     }
 
     h3 {
-        font-size: 24px;
-
         @include media-query($on-laptop) {
             font-size: 22px;
         }
@@ -238,6 +235,8 @@
         border-collapse: collapse;
         margin-top: 10px;
         margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     table, th, td {
@@ -245,6 +244,6 @@
     }
 
     th, td {
-        padding: 6px;
+        padding: 8px;
     }
 }

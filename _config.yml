@@ -1,11 +1,11 @@
 # Site settings
 title: Swamp Castle
-email: ormsbee@gmail.com
+email: dave@edx.org
 description: > 
   
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://swamp.hereticmonkey.com"
+url: "http://swampcastle.org"
 twitter_username: ormsbee
 github_username:  ormsbee
 
