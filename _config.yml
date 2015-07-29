@@ -1,0 +1,19 @@
+# Site settings
+title: Swamp Castle
+email: ormsbee@gmail.com
+description: > 
+  
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://swamp.hereticmonkey.com"
+twitter_username: ormsbee
+github_username:  ormsbee
+
+# Build settings
+markdown: redcarpet
+
+redcarpet:
+  extensions: ["tables", "no_intra_emphasis", "autolink"]
+
+# Conversion
+excerpt_separator: "\n\n\n"
