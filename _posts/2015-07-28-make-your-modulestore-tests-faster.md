@@ -2,7 +2,7 @@
 layout: post
 title:  Writing Faster ModuleStore Tests
 date:   2015-07-28 05:20:39
-categories: tests, performance
+# categories: "tests"
 ---
 
 Most developers who have added features to edx-platform are familiar with

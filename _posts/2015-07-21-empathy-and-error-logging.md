@@ -2,7 +2,7 @@
 layout: post
 title:  "Empathy and Error Logging"
 date:   2015-07-21 21:55:57
-categories: logging
+# categories: logging
 ---
 
 There are [good guidelines](http://dev.splunk.com/view/logging-best-practices/SP-CAAADP6)
