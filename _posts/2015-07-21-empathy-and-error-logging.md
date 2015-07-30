@@ -68,7 +68,7 @@ logging.error(
 )
 ```
 
-As the author, that might feel silly. This code is clearly only ever reached if
+As the author, that might feel silly. Maybe this code is only ever reached if
 the enrollment was advertised, and if it wasn't in the active enrollment period,
 it wouldn't be advertised.
 
