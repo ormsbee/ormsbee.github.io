@@ -108,7 +108,7 @@ that effectively multiply the number of tests in a class.
 
 ## Overall Takeaway
 
-Database access is an expensive part of running tests, and the `ModuleStore` is
-a prime example of that. I hope that `SharedModuleStoreTestCase` can be a useful
+Test data creation and cleanup can be an expensive, and the `ModuleStore` is a
+prime example of that. I hope that `SharedModuleStoreTestCase` can be a useful
 tool for bringing down test execution times. But beyond that, I hope that
 understanding why it works will allow us to design faster test suites in general.
