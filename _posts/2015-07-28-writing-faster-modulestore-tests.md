@@ -36,7 +36,7 @@ promising:
 
 So how do you convert your own tests?
 
-## Making the Switch
+# Making the Switch
 
 Most classes that inherit from `ModuleStoreTestCase` start something like this:
 
@@ -92,7 +92,7 @@ to safely do class-level initialization of Django models with automatic cleanup.
 Please wait for that upgrade and place model manipulations in `setUp()` for now,
 even if it is a bit slower.
 
-## Which Tests Should I Convert?
+# Which Tests Should I Convert?
 
 The easiest place to hunt for test optimization targets is the Jenkins 
 [test build report](https://build.testeng.edx.org/job/edx-platform-python-unittests-master/lastStableBuild/testReport/).
@@ -106,7 +106,7 @@ discussions). Creating even the simplest course takes about 250-300ms or so,
 which really adds up when using tools like [`ddt`](http://ddt.readthedocs.org)
 that effectively multiply the number of tests in a class.
 
-## Overall Takeaway
+# Overall Takeaway
 
 Test data creation and cleanup can be an expensive, and the `ModuleStore` is a
 prime example of that. I hope that `SharedModuleStoreTestCase` can be a useful
