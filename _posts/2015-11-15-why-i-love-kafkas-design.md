@@ -4,8 +4,8 @@ title:  Why I Love Kafka's Design
 date:   2015-11-15 00:00:00
 ---
 
-Many developers revere the interface. As long as you build the right
-abstractions, they believe, how you actually store the data is an implementation
+We are taught to revere the interface. As long as you build the right
+abstractions, we're told, how you actually store the data is an implementation
 detail that can be fixed up later. Just make a clean API that has a clear
 division of responsibilities, and you will be fine. I've heard this time and
 time again, particularly in reference to initial implementations of APIs that
@@ -13,8 +13,8 @@ worked fine for N=100, but that we intended to "scale up later" to handle a
 thousand times that (it wasn't wishful startup thinking — we already had those
 use cases).
 
-The problem is that for non-trivial applications, you often can't know what the
-"right abstractions" are until you understand your data at the desired scale.
+The problem is that for non-trivial applications, we often can't know what the
+"right abstractions" are until we understand our data at the desired scale.
 One of my favorite examples of this is [Kafka](http://kafka.apache.org/), an
 open source messaging system originally developed at LinkedIn.
 
